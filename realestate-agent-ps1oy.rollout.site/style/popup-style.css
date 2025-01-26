@@ -1,0 +1,257 @@
+
+
+/* Modal Styles */
+.newmodal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.newmodal .modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 80%;
+  max-width: 1000px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.newmodal .close-btn {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.newmodal .close-btn:hover,
+.newmodal .close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal Content Styles */
+.newmodal .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.newmodal .left {
+  width: 48%;
+  padding: 10px;
+}
+
+.newmodal .right {
+  width: 48%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Remove scrollable property */
+} 
+
+.newmodal.main_image {
+  width: 100%; 
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.newmodal.slider {
+  position: relative;
+  width: 100%;
+}
+
+.newmodal.slides {
+  display: flex;
+  overflow: hidden;
+}
+
+.newmodal.slide {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.newmodal.slider-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.newmodal.slider-nav .slide-thumb {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.newmodal .slider-nav .slide-thumb img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.newmodal .slider-nav .slide-thumb i {
+  font-size: 30px;
+  color: #333;
+}
+
+.newmodal .right h3 {
+  color: #000;
+  font-size: 26px;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.newmodal .right h4 {
+  color: #333;
+  font-size: 24px;
+}
+
+.newmodal p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.newmodal .download-btn {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.newmodal .download-btn:hover {
+  background-color: #444;
+}
+
+.newmodal .price-details ul {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.newmodal .price-details li {
+  color: #333;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.newmodal .location ul {
+  list-style: none;
+  padding: 0;
+}
+
+.newmodal .location li {
+  margin: 10px 0;
+  color: #555;
+}
+
+/* Fixed Call Button at Right Corner */
+.newmodal .call-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.newmodal .call-btn {
+  padding: 15px 30px;
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.newmodal .call-btn i {
+  margin-right: 10px;
+}
+
+.newmodal .call-btn:hover {
+  background-color: #444;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width:768px) {
+  .newmodal .container {
+    flex-direction: column;
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .newmodal .left, .newmodal .right {
+    width: 100%;
+  }
+
+  .newmodal .main_image {
+    width: 100%;
+  }
+
+  .newmodal .call-btn {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width:511px) {
+  .newmodal .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .newmodal .left, .newmodal .right {
+    padding: 0;
+  }
+
+  .newmodal img {
+    width: 100%;
+    height: auto;
+  }
+
+  .newmodal .call-btn {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+
+  .newmodal .slider-nav .slide-thumb img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.newmodal .view-property-btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 20px;
+}
+
+.newmodal .view-property-btn:hover {
+  background-color: #444;
+}
